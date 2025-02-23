@@ -1,0 +1,12 @@
+{
+    "input": {
+        "text": "Hello, can you help me with immigration options?"
+    },
+    "retrieveAndGenerateConfiguration": {
+        "type": "KNOWLEDGE_BASE",
+        "knowledgeBaseConfiguration": {
+            "knowledgeBaseId": "B7LAN84FNN",
+            "modelArn": "arn:aws:bedrock:us-east-2:151861118025:inference-profile/us.amazon.nova-pro-v1:0"
+        }
+    }
+}
