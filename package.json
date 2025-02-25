@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.147",
+    "@types/aws-serverless-express": "^3.3.10",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.5",
@@ -18,6 +20,7 @@
   "dependencies": {
     "@aws-sdk/client-bedrock-agent-runtime": "^3.751.0",
     "@aws-sdk/credential-providers": "^3.750.0",
+    "aws-serverless-express": "^3.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2"
