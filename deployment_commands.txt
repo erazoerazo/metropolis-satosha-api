@@ -1,0 +1,26 @@
+# generate javascript
+npx tsc
+
+# create zip file
+zip -r deployment.zip node_modules package.json package-lock.json dist/
+
+# deploy lambda function
+aws lambda update-function-code \
+  --function-name bedrockAgentAPI \
+  --zip-file fileb://deployment.zip \
+  --region us-east-2
+
+# get routes for api gateway
+aws apigatewayv2 get-routes --api-id c1f75hitl4 --region us-east-2                
+
+# create a route for api gateway
+aws apigatewayv2 create-route \  --api-id c1f75hitl4 \
+  --region us-east-2 \
+  --route-key "OPTIONS /bedrockAgentAPI" \
+  --authorization-type "NONE"
+
+# get api gateways
+aws apigatewayv2 get-api --api-id c1f75hitl4 --region us-east-2
+
+# get cors config
+aws apigatewayv2 get-cors-configuration --api-id c1f75hitl4 --region us-east-2

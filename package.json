@@ -20,6 +20,8 @@
   "dependencies": {
     "@aws-sdk/client-bedrock-agent-runtime": "^3.751.0",
     "@aws-sdk/credential-providers": "^3.750.0",
+    "@privy-io/public-api": "^2.18.9",
+    "@privy-io/server-auth": "^1.18.9",
     "aws-serverless-express": "^3.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
