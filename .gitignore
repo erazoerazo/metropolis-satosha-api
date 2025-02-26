@@ -25,3 +25,8 @@ build/
 *.ntvs*
 *.njsproj
 *.sln
+
+# Deployment files
+.deployment.zip
+.lambda-authorizer.zip
+.response.json
